@@ -1,0 +1,233 @@
+/* ===== Neon-Infused Modern Design ===== */
+:root {
+  --primary: #9046CF;
+  --primary-dark: #6E2DAD;
+  --primary-light: #E8D4FF;
+  --accent: #e74dff;
+  --accent-light: #ed85ff;
+  --text: #0A0A0A;
+  --text-light: #4A4A4A;
+  --bg: #FFFFFF;
+  --bg-alt: #F8F8F8;
+  --sidebar-width: 220px;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* Main Content - Sidebar Safe */
+.main-content {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  padding: 0 8%;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colorful Text Elements */
+.main-text {
+  position: relative;
+  z-index: 10;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -1.5px;
+}
+
+.main-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.main-subtitle strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Glowing Buttons */
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.btn {
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 8px 24px rgba(144, 70, 207, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(144, 70, 207, 0.4);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-dark) 0%, var(--accent) 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary-light);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+}
+
+/* 3D Product Showcase */
+.main-pic {
+  position: relative;
+  perspective: 1500px;
+}
+
+.main-pic img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 24px;
+  transform: rotateY(-10deg) rotateX(5deg);
+  box-shadow: 
+    40px 40px 80px rgba(0, 0, 0, 0.1),
+    -20px -20px 60px rgba(255, 255, 255, 0.8);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-pic:hover img {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+/* Dynamic Background Elements */
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, var(--primary-light) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+
+@media (max-width: 480px) {
+  :root {
+    --sidebar-width: 80px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    z-index: -1;
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+    
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .main-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 400px;
+  }
+
+  .main-pic img {
+    max-width: 100%;
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  .main-pic:hover img {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  .sidebar.closed + .main-content {
+    margin-left: 0;
+  }
+
+  #open-btn-container {
+    top: 10px;
+    left: 10px;
+  }
+
+  #open-btn {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .main-content::before {
+    top: -30%;
+    right: -40%;
+    width: 100%;
+    height: 150%;
+    opacity: 0.3;
+  }
+}
+

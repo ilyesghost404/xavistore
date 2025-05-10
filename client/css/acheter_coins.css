@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-left: 260px;
+    padding: 20px 20px 0;
+    color: #9046cf;
+}
+.coin-content{
+    width: 100%;
+    margin-left: 270px;
+}
+form {
+    width: 700px;
+    margin: 30px auto 60px 280px;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+input[type="file"] {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 90%;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #9046cf;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #9046cf;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #7839b9;
+}
+
+
+@media (max-width: 480px) {
+    h2 {
+        margin-left: 0;
+        padding: 20px 16px 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .coin-content {
+        margin-left: 0;
+        padding: 0 16px;
+    }
+
+    form {
+        width: 400px;
+        margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+   input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.admin{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.admin form{
+    width: 1000px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 75px;
+    transition: all .42s ease;
+    background: linear-gradient(-90deg, #9046cf 50%, #ffffff 50%);
+
+}
+/* .admin form:hover{
+    transform: scale(1.1);
+    margin-top: 20px;
+} */
+.admin h2{
+    font-size: 45px;
+    font-weight: bolder;
+    text-transform: uppercase
+    /* color: rgb(134, 40, 223); */
+}
+.admin .form .login-content{
+    display: flex;
+    gap: 75px;
+}
+.admin .form .image img{
+    width: 500px;
+}
+.admin .form .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 140px;
+    height: 100%;
+}
+.admin .form .text label{
+    display: none;
+}
+.admin .form .text div{
+    display: flex;
+    flex-direction: column;
+}
+.admin form input{
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.admin form input:focus{
+    background-color: rgb(242, 238, 238);
+    outline: none;
+}
+
+.admin form button{
+    background-color: #9046cf;
+    color: aliceblue;
+    border: 2px #9046cf;
+    border-radius: 10px;
+    width: 210px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    transition: all .42s ease;
+}
+.admin form button:hover{
+    background-color: white;
+    border: 2px #9046cf;
+    color: #9046cf;
+}
+
+@media (max-width: 480px) {
+  .admin form {
+    width: 90%;
+    height: auto;
+    padding: 30px 20px;
+    gap: 40px;
+    background: #ffffff;
+    box-shadow: none;
+  }
+
+  .admin h2 {
+    display: none;
+  }
+
+  .admin .form .login-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .admin .form .image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .admin .form .text {
+    gap: 30px;
+    align-items: center;
+  }
+
+  .admin form input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .admin form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* /////////////////////////\////////////////// // //////////////////*/
+/* ////////////////////////\/\login admin end/\/////////////////////  */
+/* ////////////////////////\//////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+

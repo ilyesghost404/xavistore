@@ -1,0 +1,69 @@
+.commande-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .commande-card {
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .commande-card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .commande-card p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+        .commande-card .btn-cancel {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .commande-card .btn-cancel:hover {
+            background-color: #c0392b;
+        }
+        .statut {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .statut.pending { color: #f39c12; }
+        .statut.shipped { color: #3498db; }
+        .statut.completed { color: #2ecc71; }
+        .statut.cancelled { color: #e74c3c; }
+
+        @media (max-width: 480px) {
+    .commande-container {
+        padding: 10px;
+    }
+
+    .commande-card {
+        padding: 15px;
+    }
+
+    .commande-card h3 {
+        font-size: 18px;
+    }
+
+    .commande-card p {
+        font-size: 13px;
+    }
+
+    .commande-card .btn-cancel {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .statut {
+        font-size: 13px;
+    }
+}

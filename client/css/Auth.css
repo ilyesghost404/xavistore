@@ -1,0 +1,159 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #7f4eeb, #9046cf); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Auth Container */
+.auth-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background: #fff;
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on the auth card */
+
+
+/* Header */
+.auth-card h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #7f4eeb;
+    background-color: #fff;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #7f4eeb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #6e3ad8;
+}
+
+/* Footer Link */
+.auth-footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #7f4eeb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: #6e3ad8;
+}
+
+/* Error and Success Messages */
+.error-message, .success-message {
+    margin: 10px 0;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-message {
+    background-color: #e74c3c;
+}
+
+.success-message {
+    background-color: #2ecc71;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .auth-card {
+        width: 400px;
+        padding: 25px;
+    }
+
+    .auth-card h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .input-field {
+        padding: 14px;
+    }
+}

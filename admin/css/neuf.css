@@ -1,0 +1,107 @@
+/* Table container spacing */
+.neufs-content {
+  margin-left: 200px; /* adjust for sidebar width */
+  padding: 40px;
+  background-color: #f9f9fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Table base */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 10px;
+}
+
+/* Header */
+.products-table thead {
+  background-color: #f3effc;
+  color: #9046cf;
+  text-align: left;
+}
+
+.products-table th, 
+.products-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+/* Row hover effect */
+.products-table tbody tr:hover {
+  background-color: #f9f9ff;
+}
+
+/* Image styling */
+.products-table img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn-edit {
+  background-color: #f0e7ff;
+  color: #9046cf;
+}
+
+.btn-edit:hover {
+  background-color: #e3d4ff;
+}
+
+.btn-sell {
+  background-color: #9046cf;
+  color: white;
+}
+
+.btn-sell:hover {
+  background-color: #7c3fc0;
+}
+@media (max-width: 480px) {
+  .neufs-content {
+    margin-left: 0;
+    margin-right: 16px;
+    margin-top: 100px;
+    padding: 20px 15px;
+  }
+
+  .products-table {
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+
+  .products-table img {
+    width: 60px;
+    height: auto;
+  }
+}
